@@ -95,9 +95,9 @@ public static class Utils
 
         var pixels = RotateImage(tex, angle);
 
-        UnityEngine.Object.Destroy(tex);
+        // UnityEngine.Object.Destroy(tex);
         tex = null;
-        UnityEngine.Object.Destroy(rtt);
+        // UnityEngine.Object.Destroy(rtt);
         rtt = null;
 
         return pixels;

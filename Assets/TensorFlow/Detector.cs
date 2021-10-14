@@ -56,15 +56,17 @@ public class Detector : MonoBehaviour
     {
 
 #if UNITY_ANDROID
-        TensorFlowSharp.Android.NativeBinding.Init ();
+        // TensorFlowSharp.Android.NativeBinding.Init ();
 #endif
+        Debug.Log("fuk");
         graph = new TFGraph();
         graph.Import(modelFile.bytes);
         session = new TFSession(graph);
 
         labels = labelFile.text.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
-        _detectionModel = model;
+        // _detectionModel = model;
+        _detectionModel = DetectionModels.YOLO;
         _inputName = input;
         _outputName = output;
         _inputHeight = height;
@@ -86,6 +88,7 @@ public class Detector : MonoBehaviour
     public IList Detect(Texture2D texture, int numResultsPerClass = 1, float threshold = 0.2f, 
                         int angle = 0, Flip flip = Flip.NONE)
     {
+
         var shape = new TFShape(1, _inputWidth, _inputHeight, 3);
         var input = graph[_inputName][0];
         TFTensor inputTensor = null;

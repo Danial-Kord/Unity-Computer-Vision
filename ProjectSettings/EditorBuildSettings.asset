@@ -4,5 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  m_configObjects:
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: f54636f85da95d34a913b726ba22260e, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: dadd90a524ffad34998acbffd7fd581c, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 500e8bb1c9c169141a9f5cea4ee8dabc, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7b6b510c6b0d91a4b9c6eed85934fb42, type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: b1156e7dd7355e4419147211f182e609, type: 2}

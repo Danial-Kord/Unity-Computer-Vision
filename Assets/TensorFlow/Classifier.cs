@@ -28,7 +28,7 @@ public class Classifier
                       float std = 127.5f)
     {
 #if UNITY_ANDROID
-        TensorFlowSharp.Android.NativeBinding.Init ();
+        // TensorFlowSharp.Android.NativeBinding.Init ();
 #endif
         graph = new TFGraph();
         graph.Import(modelFile.bytes);
